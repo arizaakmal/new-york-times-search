@@ -30,7 +30,7 @@ const SearchBar: React.FC<SearchBarProps> = ({ onSearch, placeholder = "Search a
             onChange={handleInputChange}
             placeholder={placeholder}
             disabled={loading}
-            className="w-full h-16 px-6 pr-16 text-lg border-2 border-gray-300 rounded-xl 
+            className="w-full h-16 px-6 pr-16 text-lg border-2 border-gray-300 rounded-xl bg-white
                      focus:border-gray-800 focus:outline-none focus:ring-4 focus:ring-gray-200
                      disabled:opacity-50 disabled:cursor-not-allowed
                      placeholder-gray-400 shadow-lg transition-all duration-200

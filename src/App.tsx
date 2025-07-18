@@ -9,10 +9,12 @@ function App() {
   const [loading, setLoading] = useState(false);
   const [articles, setArticles] = useState<Article[]>([]);
   const [error, setError] = useState<string | null>(null);
+  const [searchQuery, setSearchQuery] = useState<string>("");
 
   const handleSearch = async (query: string) => {
     setLoading(true);
     setError(null);
+    setSearchQuery(query);
 
     try {
       const results = await searchArticles(query);
@@ -28,7 +30,6 @@ function App() {
   return (
     <>
       <div className="min-h-screen bg-orange-50 text-gray-800">
-        {/* Header Section - always at the same position */}
         <div className="pt-16 pb-8">
           <div className="flex flex-col items-center">
             <img src="/new-york-times-logo.png" alt="The New York Times" className="w-80 h-auto mb-6" />
@@ -38,7 +39,7 @@ function App() {
           </div>
         </div>
 
-        <ArticleList articles={articles} />
+        <ArticleList articles={articles} searchQuery={searchQuery} />
       </div>
     </>
   );
