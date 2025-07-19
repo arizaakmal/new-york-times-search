@@ -46,5 +46,5 @@ The application will be available at `http://localhost:5173`
 The project includes comprehensive functional tests for the NYT API integration:
 
 ```bash
-npm test
+npm run test
 ```

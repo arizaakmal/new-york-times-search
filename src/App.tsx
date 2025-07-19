@@ -38,7 +38,6 @@ function App() {
             {error && <div className="mt-4 p-4 bg-red-100 border border-red-400 text-red-700 rounded-lg">{error}</div>}
           </div>
         </div>
-
         <ArticleList articles={articles} searchQuery={searchQuery} />
       </div>
     </>
